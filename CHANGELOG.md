@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-17: Deploy on Railway button
+
+- README only: adds the Deploy on Railway button for the published template `deepwiki-open-1`. No change to the image, start command or variables; nothing to do on existing deploys.
+
 ## 2026-11-17: first release
 
 - DeepWiki-Open `sha-9c28366` (upstream `main` at 9c28366, 2026-11-15), official image pinned by digest `sha256:d16868c1c4dc17b471128afc2275318a6a806c73fc204927d75c51ee67c03582`.
