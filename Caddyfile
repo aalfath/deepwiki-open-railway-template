@@ -1,0 +1,25 @@
+{
+	admin off
+	auto_https off
+	persist_config off
+}
+
+:{$PORT} {
+	@protected not path /health
+	basic_auth @protected {
+		{$BASIC_AUTH_USERNAME} {$BASIC_AUTH_HASH}
+	}
+
+	# API: health check, chat/codemap WebSockets, codemap file reads
+	@api path /health /ws/* /codemap/file
+	handle @api {
+		reverse_proxy 127.0.0.1:8001
+	}
+
+	# Everything else: the Next.js UI (it proxies its own /api/* calls to the API)
+	handle {
+		reverse_proxy 127.0.0.1:3000 {
+			flush_interval -1
+		}
+	}
+}
