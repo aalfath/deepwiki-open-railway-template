@@ -1,3 +1,5 @@
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/deepwiki-open-1?utm_medium=integration&utm_source=button&utm_campaign=deepwiki-open)
+
 # DeepWiki-Open on Railway
 
 Railway template for [DeepWiki-Open](https://github.com/AsyncFuncAI/deepwiki-open) (MIT), the open-source AI wiki generator for GitHub, GitLab and Bitbucket repositories.
